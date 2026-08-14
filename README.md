@@ -14,41 +14,49 @@
   <a href="https://github.com/kasunimadumekala">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
-  <a href="https://github.com/kasunimadumekala/kasuni-New-portfolio">
-    <img src="https://img.shields.io/badge/Portfolio-8B5CF6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio">
+
+  <a href="https://kasunimadumekala.github.io/kasuni-New-portfolio/">
+    <img src="https://img.shields.io/badge/Live%20Portfolio-8B5CF6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Portfolio">
+  </a>
+
+  <a href="https://www.linkedin.com/in/kasuni-madumekala-a7576231b/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
 </p>
 
+---
 
 ## 🌐 About This Project
 
-This repository contains my personal portfolio website.
+This repository contains my **personal portfolio website**, designed and developed to showcase my skills, projects, education, interests, and development journey.
 
-The website is designed to showcase my:
+The portfolio features a modern dark-themed interface with a responsive layout, smooth animations, gradient effects, interactive elements, and a developer-focused design.
 
-- 👩‍💻 Skills
-- 🚀 Projects
-- 🎓 Education
-- 💡 Interests
-- 📩 Contact information
+### 🚀 Excited to Share My New Personal Portfolio Website!
 
-The portfolio features a modern dark-themed interface with a responsive layout, animated elements, gradient effects, and interactive sections
+I’m excited to share my newly designed and developed personal portfolio website, created to showcase my skills, projects, education, and development journey. 💻✨
 
-## ✨ Features
+This project represents my continuous learning, creativity, and passion for building modern web experiences.
 
-- 🌙 Modern dark UI
+---
+
+## ✨ Key Features
+
+- 🌙 Modern dark-themed UI
 - 📱 Fully responsive design
 - 🎨 Purple & cyan gradient theme
 - ✨ Smooth scroll animations
 - ⌨️ Typing animation
 - 🪄 Reveal animations
 - 💻 Developer-style code card
-- 📊 Skills section
+- 👩‍💻 Developer profile section
+- 📊 Skills & technologies showcase
 - 🚀 Projects showcase
 - 🎓 Education section
 - 📬 Contact section
-- ⬆️ Back-to-top button
 - 📱 Mobile navigation menu
+- ⬆️ Back-to-top button
+- 🎯 Clean and modern UI/UX
 
 ---
 
@@ -68,16 +76,53 @@ The portfolio features a modern dark-themed interface with a responsive layout, 
 - CSS Gradients
 - Glassmorphism
 - Responsive Design
+- Modern UI/UX
 
 ### Icons & Fonts
 
 - Font Awesome
 - Google Fonts
 - Inter
-- Space Grotes
-- 
+- Space Grotesk
+
+---
+
+## 🌐 Live Portfolio
+
+You can visit my live portfolio here:
+
+<p align="center">
+  <a href="https://kasunimadumekala.github.io/kasuni-New-portfolio/">
+    <img src="https://img.shields.io/badge/🌐%20Visit%20My%20Portfolio-8B5CF6?style=for-the-badge" alt="Visit Portfolio">
+  </a>
+</p>
+
+🔗 **Live Website:**  
+https://kasunimadumekala.github.io/kasuni-New-portfolio/
+
+---
+
+## 💻 GitHub
+
+You can explore my GitHub profile and other projects here:
+
+🔗 **GitHub:**  
+https://github.com/kasunimadumekala
+
+---
+
+## 🔗 LinkedIn
+
+Connect with me on LinkedIn:
+
+🔗 **LinkedIn:**  
+https://www.linkedin.com/in/kasuni-madumekala-a7576231b/
+
+---
+
 ## 📁 Project Structure
-text
+
+```text
 kasuni-New-portfolio/
 │
 ├── index.html
