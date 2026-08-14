@@ -1,0 +1,366 @@
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const navMenu =
+    document.getElementById("navMenu");
+
+
+menuButton.addEventListener("click", () => {
+
+    navMenu.classList.toggle("show");
+
+    const icon =
+        menuButton.querySelector("i");
+
+    if (navMenu.classList.contains("show")) {
+
+        icon.classList.remove("fa-bars");
+
+        icon.classList.add("fa-xmark");
+
+    } else {
+
+        icon.classList.remove("fa-xmark");
+
+        icon.classList.add("fa-bars");
+
+    }
+
+});
+
+
+/* Close mobile menu */
+
+document
+    .querySelectorAll(".nav-link")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navMenu.classList.remove("show");
+
+            const icon =
+                menuButton.querySelector("i");
+
+            icon.classList.remove("fa-xmark");
+
+            icon.classList.add("fa-bars");
+
+        });
+
+    });
+
+
+
+/* =========================================
+   TYPING EFFECT
+========================================= */
+
+const typing =
+    document.getElementById("typing");
+
+const words = [
+
+    " | Front-End Developer",
+
+    " | UI/UX Enthusiast",
+
+    " | Web Developer"
+
+];
+
+let wordIndex = 0;
+
+let characterIndex = 0;
+
+let deleting = false;
+
+
+function typeEffect() {
+
+    const currentWord =
+        words[wordIndex];
+
+
+    if (!deleting) {
+
+        typing.textContent =
+            currentWord.substring(
+                0,
+                characterIndex
+            );
+
+        characterIndex++;
+
+
+        if (
+            characterIndex >
+            currentWord.length
+        ) {
+
+            deleting = true;
+
+            setTimeout(
+                typeEffect,
+                1200
+            );
+
+            return;
+
+        }
+
+    } else {
+
+        typing.textContent =
+            currentWord.substring(
+                0,
+                characterIndex
+            );
+
+        characterIndex--;
+
+
+        if (characterIndex < 0) {
+
+            deleting = false;
+
+            characterIndex = 0;
+
+            wordIndex =
+                (wordIndex + 1)
+                % words.length;
+
+        }
+
+    }
+
+
+    setTimeout(
+        typeEffect,
+        deleting ? 45 : 80
+    );
+
+}
+
+
+typeEffect();
+
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (
+                    entry.isIntersecting
+                ) {
+
+                    entry.target
+                        .classList
+                        .add("visible");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(element => {
+
+        observer.observe(element);
+
+    });
+
+
+
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
+
+const sections =
+    document.querySelectorAll("section");
+
+const navLinks =
+    document.querySelectorAll(".nav-link");
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        let currentSection = "";
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop - 180;
+
+
+            if (
+                window.scrollY >=
+                sectionTop
+            ) {
+
+                currentSection =
+                    section.getAttribute(
+                        "id"
+                    );
+
+            }
+
+        });
+
+
+        navLinks.forEach(link => {
+
+            link.classList.remove(
+                "active"
+            );
+
+
+            if (
+                link.getAttribute("href")
+                ===
+                `#${currentSection}`
+            ) {
+
+                link.classList.add(
+                    "active"
+                );
+
+            }
+
+        });
+
+    }
+);
+
+
+
+/* =========================================
+   BACK TO TOP
+========================================= */
+
+const backTop =
+    document.getElementById("backTop");
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (
+            window.scrollY > 500
+        ) {
+
+            backTop.classList.add(
+                "show"
+            );
+
+        } else {
+
+            backTop.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+
+backTop.addEventListener(
+    "click",
+    () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    }
+);
+
+
+
+/* =========================================
+   CARD MOUSE EFFECT
+========================================= */
+
+const cards =
+    document.querySelectorAll(
+        ".project-card, .skill-card"
+    );
+
+
+cards.forEach(card => {
+
+    card.addEventListener(
+        "mousemove",
+        event => {
+
+            const rect =
+                card.getBoundingClientRect();
+
+            const x =
+                event.clientX -
+                rect.left;
+
+            const y =
+                event.clientY -
+                rect.top;
+
+            const rotateX =
+                (y - rect.height / 2)
+                / 30;
+
+            const rotateY =
+                (rect.width / 2 - x)
+                / 30;
+
+
+            card.style.transform =
+                `perspective(700px)
+                 rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)
+                 translateY(-6px)`;
+
+        }
+    );
+
+
+    card.addEventListener(
+        "mouseleave",
+        () => {
+
+            card.style.transform =
+                "";
+
+        }
+    );
+
+});
+
+
+
+
